@@ -22,14 +22,18 @@ const server = http.createServer((req, res) => {
   }
 
   if (url === "/create-user" && method === "POST") {
+    const body = [];
     req.on("data", (chunk) => {
-      console.log(chunk.toString().split("="));
-      res.write("<html>");
-      res.write(`Welcome ${chunk.toString().split("=")[1]}`);
-      res.write("</html>");
-      res.end();
+      body.push(chunk);
     });
+    req.on("end", () => {
+      const parsedBody = Buffer.concat(body).toString();
+      console.log(parsedBody.split("=")[1]);
+    });
+    res.statusCode = 302;
+    res.setHeader("Location", "/");
+    res.end();
   }
 });
 
-server.listen(3000, () => console.log("server is running"));
+server.listen(3000, () => console.log("server is rkunning"));
