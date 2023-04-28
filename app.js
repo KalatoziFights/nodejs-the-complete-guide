@@ -1,14 +1,16 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-
-const app = express();
-
-app.set("view engine", "pug");
-app.set("views", "views");
+const expressHbs = require("express-handlebars");
 
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
+
+const app = express();
+
+app.engine("handlebars", expressHbs());
+app.set("view engine", "handlebars");
+app.set("views", "views");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 // built-in middleware function in Express. It serves static files
