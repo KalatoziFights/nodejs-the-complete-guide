@@ -39,6 +39,20 @@ exports.getCart = (req, res, next) => {
   });
 };
 
+exports.postCart = (req, res, next) => {
+  const productId = req.body.productId;
+  // Product.findById(productId, (product) => {
+  //   console.log(product, "product");
+  //   res.render("shop/cart", {
+  //     pageTitle: product.title,
+  //     // productId: productId,
+  //     path: "/cart",
+  //     product: product,
+  //   });
+  // });
+  res.redirect("/cart");
+};
+
 exports.getOrders = (req, res, next) => {
   res.render("shop/orders", {
     path: "/orders",
