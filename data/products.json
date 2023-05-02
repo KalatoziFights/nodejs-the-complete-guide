@@ -1,1 +1,16 @@
-[{"id":"1","title":"Mikasa","imageUrl":"https://thicc.mywaifulist.moe/waifus/486/59fd859006ec1a65f9a0b25f37745bf9edf23632fa6a939f4a5505443c00cdee_thumb.png","price":"9999999","description":"chemi coli mikasa"},{"title":"Kushina","imageUrl":"https://i.pinimg.com/474x/e7/8d/d7/e78dd7c0d73ab8cee68f8601b19bc8eb.jpg","price":"1000","description":"Kushina my second wife","id":"0.6154728777371401"},{"title":"GEORGIAN WIFE","imageUrl":"https://img-9gag-fun.9cache.com/photo/a3EXeL8_460s.jpg","price":"CHEMI ANOTHER COLI\r\n","description":"1","id":"0.29858055648152604"}]
+[
+  {
+    "id": "1",
+    "title": "Mikasa",
+    "imageUrl": "https://thicc.mywaifulist.moe/waifus/486/59fd859006ec1a65f9a0b25f37745bf9edf23632fa6a939f4a5505443c00cdee_thumb.png",
+    "price": "9999999",
+    "description": "chemi coli mikasa"
+  },
+  {
+    "title": "Kushina",
+    "imageUrl": "https://i.pinimg.com/474x/e7/8d/d7/e78dd7c0d73ab8cee68f8601b19bc8eb.jpg",
+    "price": "1000",
+    "description": "Kushina my second wife",
+    "id": "0.6154728777371401"
+  }
+]
