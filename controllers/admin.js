@@ -64,3 +64,17 @@ exports.getProducts = (req, res, next) => {
     });
   });
 };
+
+exports.postDeleteProduct = (req, res, next) => {
+  const productId = req.body.productId;
+  Product.deleteById(productId, (product) => {
+    if (!product) {
+      return res.redirect("/admin/products");
+    }
+    res.render("admin/products", {
+      pageTitle: "Products",
+      path: "/admin/products",
+      prods: product,
+    });
+  });
+};
