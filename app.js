@@ -23,8 +23,6 @@ app.use(
   session({ secret: "supersecret", resave: false, saveUninitialized: false })
 );
 
-// does it works?
-
 app.use((req, res, next) => {
   User.findById("64665746d5e51160b906ab5d")
     .then((user) => {
