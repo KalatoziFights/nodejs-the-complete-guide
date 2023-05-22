@@ -45,6 +45,12 @@
           >Login</a
         >
       </li>
+      <% } %> <% if (isAuth) { %>
+      <li class="main-header__item">
+        <form action="/logout" method="POST">
+          <button type="submit">Logout</button>
+        </form>
+      </li>
       <% } %>
     </ul>
   </nav>
