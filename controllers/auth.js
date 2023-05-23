@@ -24,3 +24,13 @@ exports.postLogin = (req, res) => {
 exports.postLogout = (req, res) => {
   req.session.destroy(() => res.redirect("/"));
 };
+
+exports.getSignup = (req, res) => {
+  res.render("auth/signup", {
+    path: "/signup",
+    pageTitle: "Signup",
+    isAuth: false,
+  });
+};
+
+exports.postSignup = () => {};
