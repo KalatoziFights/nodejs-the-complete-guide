@@ -40,7 +40,6 @@
 
     <ul class="main-header__item-list">
       <% if (!isAuth) { %>
-      <!-- <input type="hidden" value="<%= csrfToken %>" /> -->
       <li class="main-header__item">
         <a class="<%= path === '/login' ? 'active' : '' %>" href="/login"
           >Login</a
