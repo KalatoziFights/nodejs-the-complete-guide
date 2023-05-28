@@ -99,15 +99,14 @@ exports.postSignup = (req, res) => {
         })
         .then((result) => {
           res.redirect("/login");
-          return transporter
-            .sendMail({
-              to: email,
-              from: "shop@node-complete.com",
-              subject: "Sign Up Succeded!",
-              html: "<h1>You successfully signed up!</h1>",
-            })
-            .catch((err) => console.log(err));
-        });
+          return transporter.sendMail({
+            to: email,
+            from: "shop@node-complete.com",
+            subject: "Sign Up Succeded!",
+            html: "<h1>You successfully signed up!</h1>",
+          });
+        })
+        .catch((err) => console.log(err));
     })
     .catch((err) => console.log(err));
 };
