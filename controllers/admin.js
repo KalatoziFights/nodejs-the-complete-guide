@@ -38,6 +38,8 @@ exports.postAddProduct = (req, res, next) => {
 
   console.log(image, "imageUrl");
 
+  const imageUrl = image.path;
+
   if (!errros.isEmpty()) {
     return res.status(422).render("admin/edit-product", {
       pageTitle: "Add Product",
@@ -54,8 +56,6 @@ exports.postAddProduct = (req, res, next) => {
       validationErrors: errros.array(),
     });
   }
-
-  const imageUrl = image.path;
 
   const product = new Product({
     title: title,
