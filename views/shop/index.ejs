@@ -26,13 +26,10 @@
                                 <a href="/products/<%= product._id %>" class="btn">Details</a>
                             <%- include('../includes/add-to-cart.ejs', {product: product}) %>
                         </div>
+                        
                     </article>
                       
                 <% } %>
-            <section class="pagination">
-                <a href="/?page=1">1</a>
-                <a href="/?page=2">2</a>
-            </section>
             </div>
         <% } else { %>
             <h1>No Products Found!</h1>
